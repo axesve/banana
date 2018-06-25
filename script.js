@@ -16,7 +16,7 @@ items.sort( function ( a, b ) { return b.height - a.height; } );
 
 function spawnItems(i,n,h){
     var e = document.getElementById("c");
-	e.insertAdjacentHTML('afterbegin','<div class="item"><div class="itemName">'+n+'</div><div class="itemBananas" id='+i+'>');
+	e.insertAdjacentHTML('afterbegin','<div class="item"><div class="itemName">'+n+' - '+(h/15).toFixed(0)+' Bananas</div><div class="itemBananas" id='+i+'>');
 	var tBananas = (h/15240);
 	tBananas--;	
 	console.log(tBananas);	
@@ -37,7 +37,7 @@ function drawBanana(i,b,t) {
 					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana3.png">');
 				}else if(1 - Math.abs(t-b) >= 0.7){
 					var e = document.getElementById(i);
-					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana4.png">');
+					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana1.png">');
 				}
 	    	}
 

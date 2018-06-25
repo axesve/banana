@@ -5,3 +5,5 @@ Help by adding landmarks, items or other objects in the items array, take the ob
 
 {name:"name (H) / (L)",height:"000"}
 
+Current URL:
+https://axesve.github.io/banana/

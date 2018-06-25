@@ -55,7 +55,7 @@ function drawBanana(i,b,t) {
 		drawBanana(i,b,t);
 	
     }
-  }, 10);
+  }, 20);
 };
 
 function toggle(i){

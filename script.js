@@ -55,15 +55,15 @@ function drawBanana(i,b,t) {
     	if(b > t){
 
     		//Bad way, unsure how well it works.
-    		if(Math.abs(t-b)*1000 < 1000 && Math.abs(t-b)*1000 > 600){
+    		if(Math.abs(t-b)*1000 > 700){
 					var e = document.getElementById(i);
-					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana3.png">');
-    		}else if(Math.abs(t-b)*1000 <= 500){
+					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana1.png">');
+    		}else if(Math.abs(t-b)*1000 > 500){
     				var e = document.getElementById(i);
 					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana2.png">');
-    		}else if(Math.abs(t-b)*1000 < 250){
+    		}else if(Math.abs(t-b)*1000 > 0){
     				var e = document.getElementById(i);
-					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana1.png">');
+					e.insertAdjacentHTML('beforeend','<img class="banana" src="imgs/banana3.png">');
     		}
 	    	}
 

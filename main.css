@@ -19,13 +19,17 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #ffda79; 
     height: 5px;
 
 }
 
 img{
 	pointer-events: none;
+}
+
+.show{
+	max-height: none !important;
 }
 
 .container{
@@ -46,7 +50,16 @@ img{
 	border-radius: 5px;
 	border:2px solid #84817a;
 	min-height: 70px;
+	max-height: 135px;
+	overflow: auto;
 	background-color: #fcf7ed;
+	position: relative;
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+
+.item:hover{
+	box-shadow: 0px 3px 5px rgb(155,155,155);
 }
 
 .itemName{

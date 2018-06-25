@@ -4,7 +4,8 @@
 var banana = 15.24;
 var items = [
 {name:"Mount Everest",height:"884800"},
-{name:"Eiffel Tower",height:"324000"},];
+{name:"Eiffel Tower",height:"324000"},
+{name:"Amazon River",height:"699200000"},];
 var bananas = 0;
 
 window.onload = function () {
@@ -16,12 +17,18 @@ items.sort( function ( a, b ) { return b.height - a.height; } );
 
 function spawnItems(i,n,h){
     var e = document.getElementById("c");
-	e.insertAdjacentHTML('afterbegin','<div class="item"><div class="itemName">'+n+' - '+(h/15).toFixed(0)+' Bananas</div><div class="itemBananas" id='+i+'>');
+
+    var number = spaceFormat((h/15).toFixed(0));
+	e.insertAdjacentHTML('afterbegin','<div class="item" onclick="toggle(this)"><div class="itemName">'+n+' - '+number+' Bananas</div><div class="itemBananas" id='+i+'>');
 	var tBananas = (h/15240);
 	tBananas--;	
-	console.log(tBananas);	
+
 	this.drawBanana(i,0,Math.abs(tBananas));
 	
+}
+
+function spaceFormat(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
 function drawBanana(i,b,t) {
@@ -50,3 +57,11 @@ function drawBanana(i,b,t) {
     }
   }, 25);
 };
+
+function toggle(i){
+	if(i.classList.contains("show")){
+		i.classList.remove("show");
+	}else{
+		i.classList.add("show");
+	}
+}
